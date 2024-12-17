@@ -13,11 +13,11 @@ const LandingPage = ({ onButtonClick }) => {
 
     timerRef.current = setTimeout(() => {
       onButtonClick();
-    }, 3000);
+    }, 1500);
 
     intervalRef.current = setInterval(() => {
       setProgress((prev) => {
-        const newProgress = prev + (100 / 3000) * 60;
+        const newProgress = prev + (100 / 1500) * 60;
         if (newProgress >= 100) {
           clearInterval(intervalRef.current);
         }
