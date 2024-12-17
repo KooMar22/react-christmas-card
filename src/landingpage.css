@@ -1,0 +1,52 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 90dvh;
+  background: url("/assets/images/landing_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.present {
+  display: flex;
+  width: 150px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 2mm ridge darkred;
+}
+
+.present img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.start-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; 
+  height: 80px; 
+  font-size: calc(0.5em + 1vw);
+  font-weight: bold;
+  color: hwb(51 0% 0%);
+  background: rgb(255, 0, 0);
+  border-radius: 50%; 
+  cursor: pointer;
+  overflow: hidden; 
+}
+
+@media (orientation: portrait) {
+  .start-button {
+      font-size: calc(0.8em + 1vw);
+  }
+}
+
+.start-button:active {
+  background: rgb(138, 43, 226); 
+}

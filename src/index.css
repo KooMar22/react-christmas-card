@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 250, 250);
+  color: rgb(0, 0, 0);
+}
+
+.footer-text {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 25%;
+  margin-right: 2.5%;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+}

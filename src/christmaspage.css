@@ -1,0 +1,123 @@
+.christmas-page {
+  position: relative;
+  width: 100dvw;
+  height: 90dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("/assets/images/christmas_bg.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.snowfall-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes pulseRepatica {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.repatica, .santa, .grinch, .krampus {
+  display: flex;
+  width: calc(10em + 1vw);
+  height: calc(10em + 1vw);
+  align-items: center;
+  justify-content: center;
+}
+
+.repatica {
+  position: absolute;
+  top: -5%;
+  animation: pulseRepatica 2s infinite;
+}
+
+@keyframes moveSanta {
+  0% {
+    transform: translateX(-105vw);
+  }
+  100% {
+    transform: translateX(105vw);
+  }
+}
+
+.santa {
+  position: absolute;
+  bottom: -2.5%;
+  left: -5vw;
+  animation: moveSanta 10s infinite linear;
+}
+
+@keyframes moveGrinch {
+  0% {
+    transform: translateX(-110vw);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(11vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-110vw);
+    opacity: 0;
+  }
+}
+
+.grinch {
+  position: absolute;
+  bottom: 0;
+  left: -10vw;
+  opacity: 0;
+  animation: moveGrinch 10s infinite ease-in-out;
+  animation-delay: 2.5s;
+}
+
+@keyframes moveKrampus {
+  0% {
+    transform: translateX(110vw);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110vw);
+    opacity: 0;
+  }
+}
+
+.krampus {
+  position: absolute;
+  bottom: -2.5%;
+  right: -10vw;
+  opacity: 0;
+  animation: moveKrampus 10s infinite ease-in-out;
+  animation-delay: 1.5s;
+}
+
+.repatica img, .santa img, .grinch img, .krampus img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
