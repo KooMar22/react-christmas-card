@@ -46,6 +46,13 @@
   justify-content: center;
 }
 
+@media (orientation: portrait) {
+  .repatica, .santa, .grinch, .krampus {
+    width: calc(8em + 1vw);
+    height: calc(8em + 1vw);
+  }
+}
+
 .repatica {
   position: absolute;
   top: -5%;
