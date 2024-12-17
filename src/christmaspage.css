@@ -48,8 +48,8 @@
 
 @media (orientation: portrait) {
   .repatica, .santa, .grinch, .krampus {
-    width: calc(8em + 1vw);
-    height: calc(8em + 1vw);
+    width: calc(7em + 1vw);
+    height: calc(7em + 1vw);
   }
 }
 
