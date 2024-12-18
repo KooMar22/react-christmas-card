@@ -55,7 +55,7 @@
 
 .repatica {
   position: absolute;
-  top: -5%;
+  top: 0;
   animation: pulseRepatica 2s infinite;
 }
 
