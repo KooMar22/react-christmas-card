@@ -46,7 +46,3 @@
       font-size: calc(0.8em + 1vw);
   }
 }
-
-.start-button:active {
-  background: rgb(138, 43, 226); 
-}
