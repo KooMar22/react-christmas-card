@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import "../landingpage.css";
 
-const LandingPage = ({ onButtonClick }) => {
+const LandingPage = ({ onButtonClick, playMusic }) => {
   const [isHolding, setIsHolding] = useState(false);
   const [progress, setProgress] = useState(0);
   const timerRef = useRef(null);
@@ -11,6 +11,7 @@ const LandingPage = ({ onButtonClick }) => {
     event.preventDefault();
     setIsHolding(true);
     setProgress(0);
+    playMusic();
 
     timerRef.current = setTimeout(() => {
       onButtonClick();
@@ -37,10 +38,7 @@ const LandingPage = ({ onButtonClick }) => {
   return (
     <div className="landing-page">
       <div className="present">
-        <img
-          src="/assets/images/present.jpg"
-          alt="Present Image"
-        />
+        <img src="/assets/images/present.jpg" alt="Present Image" />
       </div>
 
       <button

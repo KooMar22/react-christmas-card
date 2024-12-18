@@ -1,7 +1,7 @@
-import { useState} from "react";
+import { useState } from "react";
 import LandingPage from "./pages/LandingPage";
 import ChristmasPage from "./pages/ChristmasPage";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 import useMusic from "./hooks/useMusic";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
 
   const handleButtonClick = () => {
     setIsChristmasPage(true);
-    playMusic()
+    playMusic();
   };
 
   return (
@@ -18,7 +18,7 @@ const App = () => {
       {isChristmasPage ? (
         <ChristmasPage />
       ) : (
-        <LandingPage onButtonClick={handleButtonClick} />
+        <LandingPage onButtonClick={handleButtonClick} playMusic={playMusic} />
       )}
       <Footer />
     </div>
