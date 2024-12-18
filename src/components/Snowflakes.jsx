@@ -5,7 +5,7 @@ const Snowflakes = () => {
     <div className="snowfall-container">
       <Snowfall
         className="snowflakes"
-        snowflakeCount={1000}
+        snowflakeCount={500}
         color="white"
       />
     </div>
