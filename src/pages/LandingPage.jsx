@@ -7,7 +7,8 @@ const LandingPage = ({ onButtonClick }) => {
   const timerRef = useRef(null);
   const intervalRef = useRef(null);
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (event) => {
+    event.preventDefault(); // Sprječava nepoželjne default akcije
     setIsHolding(true);
     setProgress(0);
 
