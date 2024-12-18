@@ -1,23 +1,20 @@
-import { useState, useRef } from "react";
+import { useState} from "react";
 import LandingPage from "./pages/LandingPage";
 import ChristmasPage from "./pages/ChristmasPage";
 import Footer from "./components/Footer"
+import useMusic from "./hooks/useMusic";
 
 const App = () => {
   const [isChristmasPage, setIsChristmasPage] = useState(false);
-  const audioRef = useRef(null);
+  const { playMusic } = useMusic("/assets/music/Sleigh Ride.mp3");
 
   const handleButtonClick = () => {
     setIsChristmasPage(true);
-
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
+    playMusic()
   };
 
   return (
     <div className="app">
-      <audio ref={audioRef} src="/assets/music/Sleigh Ride.mp3" loop />
       {isChristmasPage ? (
         <ChristmasPage />
       ) : (
