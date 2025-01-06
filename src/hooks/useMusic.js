@@ -11,7 +11,15 @@ const useMusic = (src, loop = true) => {
     audioRef.current.play();
   };
 
-  return { playMusic };
+  const stopMusic = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();      
+      audioRef.current.currentTime = 0;  
+      audioRef.current = null;       
+    }
+  };
+
+  return { playMusic, stopMusic };
 };
 
 export default useMusic;
